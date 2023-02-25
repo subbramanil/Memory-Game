@@ -39,7 +39,8 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-sonar {
+sonarqube {
+    androidVariant 'debug'
     properties {
         property "sonar.projectKey", "subbramanil_Memory-Game"
         property "sonar.organization", "subbramanil"
