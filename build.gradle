@@ -19,7 +19,6 @@ plugins {
 }
 
 ext {
-    easy_flip_view = "2.1.0"
     support_version = "27.1.1"
     constraint_version = "1.1.3"
 }

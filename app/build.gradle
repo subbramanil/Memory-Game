@@ -31,7 +31,6 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.cardview:cardview:1.0.0'
-//    implementation "com.wajahatkarim3.EasyFlipView:EasyFlipView:$easy_flip_view"
     implementation 'com.wajahatkarim:EasyFlipView:3.0.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
@@ -40,7 +39,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-sonarqube {
+sonar {
     properties {
         property "sonar.projectKey", "subbramanil_Memory-Game"
         property "sonar.organization", "subbramanil"
