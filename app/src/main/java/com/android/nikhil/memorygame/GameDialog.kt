@@ -27,11 +27,13 @@ class GameDialog : DialogFragment() {
         return this
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onDismiss(dialog: DialogInterface?) {
         dismissListener?.onDismiss(dialog)
         super.onDismiss(dialog)
     }
 
+    @Deprecated("Deprecated in Java")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val view = activity.layoutInflater.inflate(R.layout.dialog_game, null)
         val message = arguments.getString("message")
