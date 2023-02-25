@@ -38,12 +38,3 @@ dependencies {
     //noinspection GradleDependency
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
-
-sonarqube {
-    androidVariant 'debug'
-    properties {
-        property "sonar.projectKey", "subbramanil_Memory-Game"
-        property "sonar.organization", "subbramanil"
-        property "sonar.host.url", "https://sonarcloud.io"
-    }
-}
