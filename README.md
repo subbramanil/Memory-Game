@@ -1,6 +1,8 @@
 # Memory-Game
 Memory Game for Android. The game consists of some cards which are randomly arranged. The user has to flip the cards to get the correct pairs.
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=subbramanil_Memory-Game&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=subbramanil_Memory-Game)
+
 ## Screenshots
 
 ### Home

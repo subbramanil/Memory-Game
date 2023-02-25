@@ -1,19 +1,18 @@
 package com.android.nikhil.memorygame
 
+import android.annotation.SuppressLint
 import android.content.Context
-import androidx.recyclerview.widget.RecyclerView
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
-import android.os.Handler
+import androidx.recyclerview.widget.RecyclerView
 import com.android.nikhil.memorygame.R.string
+import com.android.nikhil.memorygame.databinding.CardItemBinding
 import com.wajahatkarim3.easyflipview.EasyFlipView
-import kotlinx.android.synthetic.main.card_front.view.cardViewTextView
-
-import java.util.ArrayList
 
 /**
  * Created by NIKHIL on 08-01-2018.
@@ -38,12 +37,12 @@ class CardAdapter(
             parent: ViewGroup,
             viewType: Int
     ): CardViewHolder {
-        return CardViewHolder(LayoutInflater.from(context).inflate(R.layout.card_item, parent, false))
+        return CardViewHolder(CardItemBinding.inflate(LayoutInflater.from(context)).root)
     }
 
     override fun onBindViewHolder(
-            holder: CardViewHolder,
-            position: Int
+        holder: CardViewHolder,
+        @SuppressLint("RecyclerView") position: Int
     ) {
         cardList[position].flipView = holder.flipView
         holder.textView.text = context.getString(string.question_mark)
@@ -107,7 +106,7 @@ class CardAdapter(
     }
 
     inner class CardViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView = itemView.cardViewTextView as TextView
+        val textView = itemView.findViewById(R.id.cardViewTextView) as TextView
         val rootLayout = itemView.findViewById(R.id.cardViewRootLayout) as RelativeLayout
         val flipView = itemView.findViewById(R.id.flipView) as EasyFlipView
         val cardImageView = itemView.findViewById(R.id.cardImageView) as ImageView

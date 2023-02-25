@@ -6,7 +6,7 @@ import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import kotlinx.android.synthetic.main.dialog_game.view.*
+import com.android.nikhil.memorygame.databinding.DialogGameBinding
 
 class GameDialog : DialogFragment() {
 
@@ -35,9 +35,10 @@ class GameDialog : DialogFragment() {
 
     @Deprecated("Deprecated in Java")
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        val view = activity.layoutInflater.inflate(R.layout.dialog_game, null)
+        val binding = DialogGameBinding.inflate(activity.layoutInflater)
+        val view = binding.root
         val message = arguments.getString("message")
-        message?.let { view.message.text = it }
+        message?.let { binding.message.text = it }
         val dialog = super.onCreateDialog(savedInstanceState)
         dialog.setContentView(view)
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
