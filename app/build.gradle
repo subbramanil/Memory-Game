@@ -7,8 +7,17 @@ android {
     compileSdkVersion 33
     defaultConfig {
         applicationId "com.android.nikhil.memorygame"
+<<<<<<< Updated upstream
         minSdkVersion 15
+<<<<<<< Updated upstream
         targetSdkVersion 33
+=======
+        targetSdkVersion 29
+=======
+        minSdkVersion 23
+        targetSdkVersion 33
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
